@@ -1,3 +1,4 @@
 # SQLTT  
 SQL Translator Tool  
-![sqltranslator](https://user-images.githubusercontent.com/102957432/181340798-7e7bfbfd-e286-4de7-837f-eb24c20831c9.png)
+  
+![imgonline-com-ua-Resize-NY9oqxo2VUr](https://user-images.githubusercontent.com/102957432/181342389-26a4258d-cfb4-4c4d-ad8c-605ae96f9922.png)
