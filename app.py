@@ -16,7 +16,7 @@ def index():
         text2 = text.split('\n')
         ready = []
         for line in text2:
-            ready.append([word for word in line[:-3].split(' ')])
+            ready.append([word for word in line[:-1].split(' ')])
 
         return render_template('index.html', text=ready, form=form)
     return render_template('index.html', form=form)
