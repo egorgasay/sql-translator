@@ -1,9 +1,20 @@
+import random
+
 from flask import Flask, render_template
 from complete_translate import translator
 from forms import CommonForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'QWDLQMFQMDL:QML:'
+
+
+def app_secret_key():
+    chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+    randArray = []
+    for i in chars:
+        randArray.append(chars[random.randint(0,len(chars)-1)])
+    return ''.join(randArray)
+
+app.config['SECRET_KEY'] = app_secret_key()
 
 
 @app.route('/', methods=['POST', 'GET'])
