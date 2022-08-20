@@ -21,33 +21,33 @@
     }
 </style>
 <br>
-<h1 style="text-align: center">Привет! Это этот сайт поможет тебе перевести запрос с одного диалекта на другой!</h1>
+<h1 style="text-align: center; font-size: 45px;">Привет! Это этот сайт поможет тебе перевести запрос с одного диалекта на другой!</h1>
 
 <div class="text2cols">
     <div class="text2cols-item">
     <img src="https://i.ibb.co/f2RpVxj/laa2st.png" alt="logo" border="0"></a>
     </div>
-    <div class="text2cols-item">
+    <div class="text2cols-item" >
     <br><br><br>
     <form action="" method="post">
         {{ form.csrf_token() }}
         {% for field in form if field.name != 'csrf_token' %}
             {% if field.name != 'submit' %}
-                <h4>{{ field.label }}</h4>
-                <p>
+                <h4 style="font-size: 45px;">{{ field.label }}</h4>
+                <p style="width: 50%;">
                     {{ field }}
                     {% for error in field.errors %}
                         {{ error }}
                     {% endfor %}
                 </p>
-            {% else %}
-                {{ field }}
+
             {% endif %}
         {% endfor %}
+    {{ form.submit }}
     </form>
     {% if text %}
         <br>
-        <h4><label for="text">Ответ</label></h4>
+        <h4><label for="text" style="font-size: 45px;">Ответ</label></h4>
 {#        {{ text }}#}
         {% for line in text %}
             {% for word in line %}
