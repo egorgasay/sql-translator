@@ -10,7 +10,7 @@ def translator(query, decision):
                   'float(53)', 'decimal', 'numeric', 'datetime')
 
     for i in range(len(query)):
-        if query[i] in types_psql or query[i] in types_mssql:
+        if query[i] in types_psql or query[i] in types_mssql and not query[i+1] == 'IDENTITY':
             # query[i] = ' '.join(type_translator(query[i], decision))
             query[i] = type_translator(query[i], decision)
     # print(query)

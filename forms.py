@@ -11,7 +11,7 @@ class CommonForm(FlaskForm):
         choices=list_db,
         render_kw={
             'class': 'form-control',
-            'style': 'height: 80px; font-size: 34px'
+            'style': 'height: 80px; font-size: 28px'
         }
     )
     final_db = SelectField(
@@ -20,20 +20,20 @@ class CommonForm(FlaskForm):
         choices=list_db[::-1],
         render_kw={
             'class': 'form-control',
-            'style': 'height: 80px; font-size: 34px; '
+            'style': 'height: 80px; font-size: 28px; '
         }
     )
 
     text = TextAreaField(label='Текст запроса',
                          render_kw={
                              'class': 'form-control',
-                             'style': 'height: 180px; width: 150%; ',
+                             'style': 'height: 180px; width: 200%; ',
                          }
                          )
     submit = SubmitField("Перевести",
                          render_kw={
                              'class': 'form-control',
-                             'style': 'height: 80px; width: 30%; font-size: 34px'
+                             'style': 'height: 80px; width: 30%; font-size: 28px'
                          }
                          )
     # position = TextAreaField("HiddenField")

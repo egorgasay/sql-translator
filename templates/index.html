@@ -33,7 +33,7 @@
         {{ form.csrf_token() }}
         {% for field in form if field.name != 'csrf_token' %}
             {% if field.name != 'submit' %}
-                <h4 style="font-size: 45px;">{{ field.label }}</h4>
+                <h4 style="font-size: 30px;">{{ field.label }}</h4>
                 <p style="width: 50%;">
                     {{ field }}
                     {% for error in field.errors %}
@@ -47,7 +47,7 @@
     </form>
     {% if text %}
         <br>
-        <h4><label for="text" style="font-size: 45px;">Ответ</label></h4>
+        <h4><label for="text" style="font-size: 30px;">Ответ</label></h4>
 {#        {{ text }}#}
         {% for line in text %}
             {% for word in line %}
